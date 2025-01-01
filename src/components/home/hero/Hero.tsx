@@ -34,7 +34,7 @@ const Hero = () => {
       {/* rotate image */}
       <div >
         <Image
-        src='/images/intersect.png'
+        src='/images/animegirl.png'
         alt='Hero'
         width={734}
         height={830}
