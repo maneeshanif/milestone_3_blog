@@ -25,9 +25,9 @@ const Hero = () => {
       <div className='absolute z-20 h-[350px] top-60 left-10 md:left-16 w-[80%] md:w-[556px] flex flex-col items-start justify-around md:justify-between '>
         <h1 className={`${varela.className}  md:h-[190px] text w-full text-4xl md:text-[85px] md:leading-[85px] font-normal text-white`}>Welcome to Gates</h1>
         <p className='text-[#FAFAFA] text-[18px] font-medium'>Get the latest news on your favourite mangas, anime and manhwa around the world!</p>
-        <div className=' h-[46px]  w-[200px] md:w-[220px] bg-[#FAFAFA] hover:border hover:border-white hover:bg-[#313131]  flex items-center gap-2  px-6 justify-start'>
+        <div className=' h-[46px]  w-[200px] md:w-[230px] bg-[#FAFAFA]/[0.5] hover:border hover:border-white hover:bg-[#313131]  flex items-center gap-2  px-6 justify-start'>
             <Link href={'/blog'} className='bg-[#313131]  text-white hover:bg-white hover:text-black px-4 py-2'>Blog</Link>
-            <p className='text-black text-[16px] font-medium underline  '>Read More</p>
+            <p className='text-black text-[15px] font-medium underline   '>👈🏻Read More</p>
         </div>
 
       </div>

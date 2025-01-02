@@ -13,7 +13,7 @@ const Navbar = () => {
     { name: 'Home', link: '/' },
     { name: 'Blog', link: '/blog' },
     { name: 'Sign up', link: '/signup' },
-    { name: 'Sign in', link: '/signin' },
+    { name: 'Contact', link: '/contact' },
   ]
 
   const toggle = () => {

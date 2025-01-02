@@ -1,13 +1,17 @@
+
 import Hero from "@/components/home/hero/Hero";
+import NowTrend from "@/components/home/nowtrend/NowTrend";
 import TrendSec from "@/components/home/trend/TrendSec";
-import Navbar from "@/components/navbar/Navbar";
+
 
 export default function Home() {
   return (
     <>
- <Navbar />
+
  <Hero />
  <TrendSec />
+ <NowTrend />
+
  </>
   );
 }
