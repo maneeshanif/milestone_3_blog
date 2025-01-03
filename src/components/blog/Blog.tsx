@@ -14,6 +14,7 @@ const Blog = () => {
         const fetchBlogs = async () => {
           try {
             const res = await client.fetch(`*[_type == 'trendingblog'] {
+              _id,
               "ImageUrl": blogImage.asset->url,
               blogTitle,
               time,

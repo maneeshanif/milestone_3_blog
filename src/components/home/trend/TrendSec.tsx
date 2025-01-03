@@ -69,7 +69,7 @@ const TrendSec = () => {
               <p className='text-[16px] font-medium text[#313131] overflow-hidden '>{blogs[1]?.blogShortParagraph}</p>
               <div className='w-full flex justify-between'>
                 <div>{blogs[1]?.blogRead} min read</div>
-                <div className='text-[12px] font-medium text[#313131] underline'>Read More</div>
+                {/* <div className='text-[12px] font-medium text[#313131] underline'>Read More</div> */}
               </div>
             </div>
 
@@ -96,7 +96,7 @@ const TrendSec = () => {
               <p className='text-[16px] font-medium text[#313131] overflow-hidden '>{blogs[0]?.blogShortParagraph}</p>
               <div className='w-full flex justify-between'>
                 <div>{blogs[0]?.blogRead} min read</div>
-                <div className='text-[12px] font-medium text[#313131] underline'>Read More</div>
+                {/* <div className='text-[12px] font-medium text[#313131] underline'>Read More</div> */}
               </div>
             </div>
 

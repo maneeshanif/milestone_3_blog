@@ -14,7 +14,15 @@ interface Blog {
 }
 
 const Card = ({blogs}:{blogs:Blog}) => {
-  console.log(blogs)
+ 
+// console.log(blogs , "blogs from card")
+  
+    // Add null check for blogs
+    // if (!blogs || !blogs._id) {
+    //   return null;
+    // }
+
+  // console.log(blogs)
   return (
     <div className='w-[350px] h-[540px] flex flex-col justify-between shadow-xl  p-4  '>
         {/* image */}
@@ -30,7 +38,7 @@ const Card = ({blogs}:{blogs:Blog}) => {
               <p>{blogs?.blogShortParagraph}</p>
               <div className='w-full flex justify-between'>
                 <div>{blogs?.blogRead} min read</div>
-                <Link href={`/blog/${blogs._id || '4c954624-a8dc-4f78-bec7-32dd2bf7f605' }`} className='text-[12px] font-medium text[#313131] underline'>Read More</Link>
+                <Link href={`/blog/${blogs._id || '' }`} className='text-[12px] font-medium text[#313131] underline'>Read More</Link>
               </div>
         
 

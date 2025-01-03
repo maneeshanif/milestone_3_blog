@@ -17,7 +17,7 @@ import { Blog } from '@/store/blogAtom';
       const fetchBlogs = async () => {
         try {
           const res = await client.fetch(`*[_type == 'trendingblog'] {
-            
+            _id,
             "ImageUrl": blogImage.asset->url,
             blogTitle,
             time,
@@ -48,8 +48,8 @@ import { Blog } from '@/store/blogAtom';
           {/* body */}
           <div className='grid grid-cols-1  md:grid-cols-3  gap-6 pl-6 md:pl-0  md:gap-4'>
 
-                {blogs.map((blog : Blog) => (
-                  <Card key={blog._id} blogs={blog} />
+                {blogs.map((blog : Blog , index) => (
+                  <Card key={index} blogs={blog} />
                 ))}
           
           {/* {Array.from({ length: 3}).map((_, index) => (

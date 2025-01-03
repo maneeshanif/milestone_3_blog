@@ -21,8 +21,9 @@ const Page = ({ params }: Props) => {
     const loadBlog = async () => {
       try {
         const { _id } = await params; // Access _id directly
+        console.log(_id)
         const fetchedBlog = await client.fetch(
-          `*[_type == 'trendingblog' && _id == $id][0] {
+          `*[_type == 'trendingblog' && _id == "${_id}"][0] {
             blogTitle,
             "ImageUrl": blogImage.asset->url,
             blogParagraph,
