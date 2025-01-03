@@ -1,23 +1,36 @@
+"use client";
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
-const Card = () => {
+interface Blog {
+
+  ImageUrl: string;
+  blogTitle: string;
+  blogShortParagraph: string;
+  blogRead: string;
+  time: number;
+  _id: string;
+}
+
+const Card = ({blogs}:{blogs:Blog}) => {
+  console.log(blogs)
   return (
-    <div className='w-[330px] h-[440px] flex flex-col justify-between '>
+    <div className='w-[350px] h-[540px] flex flex-col justify-between shadow-xl  p-4  '>
         {/* image */}
          <div>
-          <Image src={'/images/trend1.png'} alt='trend' width={330} height={440}/>
+          <Image src={blogs.ImageUrl} alt='trend' width={330} height={254} className='w-full h-[254px]'/>
          </div>
          {/* text */}
          <div className='flex flex-col gap-2'>
          <div className='w-full flex items-center justify-between'>
-                <h1 className='text-[24px] font-semibold text[#313131] '>Attack on titans</h1>
-                <p className='text-[12px] font-medium text[#313131] '>1 hour ago</p>
+                <h1 className='text-[24px] font-semibold text[#313131] '>{blogs?.blogTitle}</h1>
+                <p className='text-[12px] font-medium text[#313131] '>{blogs?.time} hour ago</p>
               </div>
-              <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</p>
+              <p>{blogs?.blogShortParagraph}</p>
               <div className='w-full flex justify-between'>
-                <div>12 min read</div>
-                <div className='text-[12px] font-medium text[#313131] underline'>Read More</div>
+                <div>{blogs?.blogRead} min read</div>
+                <Link href={`/blog/${blogs._id || '4c954624-a8dc-4f78-bec7-32dd2bf7f605' }`} className='text-[12px] font-medium text[#313131] underline'>Read More</Link>
               </div>
         
 

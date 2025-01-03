@@ -1,4 +1,5 @@
 
+import BlogFetcher from "@/components/blog/BlogFetcher";
 import Hero from "@/components/home/hero/Hero";
 import NowTrend from "@/components/home/nowtrend/NowTrend";
 import TrendSec from "@/components/home/trend/TrendSec";
@@ -11,7 +12,7 @@ export default function Home() {
  <Hero />
  <TrendSec />
  <NowTrend />
-
+ <BlogFetcher />
  </>
   );
 }
